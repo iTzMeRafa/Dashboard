@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <!-- Include Stylesheets -->
+    <link rel="stylesheet" href="vendors/bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <!-- Include Javascript -->
+    <script type="text/javascript" src="vendors/JQuery-3.3.1/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <input type="text" id="leftIFrameInput" class="form-control mt-2" placeholder="Enter URL">
+            </div>
+
+            <iframe id="leftIFrame"></iframe>
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <input type="text" id="rightIFrameInput" class="form-control mt-2" placeholder="Enter URL">
+            </div>
+
+            <iframe id="rightIFrame"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- ClickHandler -->
+<script type="text/javascript" src="assets/js/leftIFrameClickEventHandler.js"></script>
+<script type="text/javascript" src="assets/js/rightIFrameClickEventHandler.js"></script>
+
+<!-- Initialize Sessions for IFrames -->
+<script>
+    leftIFrame.src = sessionStorage['leftIFrameValue'];
+    rightIFrame.src = sessionStorage['rightIFrameValue'];
+</script>
+</body>
+</html>
